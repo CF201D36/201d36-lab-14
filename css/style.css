@@ -117,13 +117,11 @@ section[class="deck col-2"] {
 }
 
 /****** TABLE Styles ******/
-/* section[class="deck col-1"] table cart {
-  float: left;
-  width: 960px;
-  min-height: 80px;
-  height: auto;
-  outline: 4px dashed red; 
-} */
+section[class="deck col-2"] .card ul {
+  margin-top: 25px;
+  margin-left: 25px;
+  /* outline: 4px dashed red;  */
+}
 
 /****** FOOTER Styles ******/
 footer {
