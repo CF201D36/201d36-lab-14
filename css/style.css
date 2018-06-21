@@ -1,1 +1,133 @@
-/* TODO: Make it awesome */
+/****** DEFAULT Styles ******/
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+body a:link    { color: #fff; text-decoration: none; }
+body a:visited { color: #fff; text-decoration: none; }
+body a:hover   { color: rgb(61, 175, 252); text-decoration: none; }
+body a:active  { color: rgb(255, 177, 31); text-decoration: none; }
+
+/****** HEADER + NAV Styles ******/
+body > header > h1 {
+  float: left;
+  position: relative;
+  left: 25px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(46, 125, 230);
+  font-size: 26px;
+  color: white;
+  text-transform: uppercase;
+  padding: 15px 0 0 10px;
+  z-index: 10;
+  /* outline: 4px dashed magenta; */
+}
+nav {
+  width: 100%;
+  height: 50px; 
+  background: rgb(88,88,88);
+  background: linear-gradient(90deg, rgba(88,88,88,1) 0%, rgba(150,150,150,1) 100%);
+  color: #fff;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 0px;
+  /* outline: 4px dashed green; */
+  /* outline: 4px dashed turquoise; */
+}
+nav ul {
+  /* float: right; */
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+  top: 22px;
+  text-align: right;
+  /* outline: 4px dashed orange; */
+}
+nav ul li {
+  display: inline;
+  padding: 15px;
+  font-size: 18px;
+}
+
+/****** MAIN Styles ******/
+main {
+  width: 960px;
+  margin: 0 auto;
+}
+main header {
+  height: 50px;
+}
+main header h1 {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+/****** DECK COL-1 Styles ******/
+section[class="deck col-1"] {
+  width: 100%;
+  height: 200px;
+  margin-top: 100px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 7px 7px 19px -5px rgba(0,0,0,0.44);
+  /* outline: 4px dashed red; */
+}
+[class="deck col-1"] h1 {
+  font-size: 22px;
+}
+.card header {
+  float: left;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(46, 125, 230);
+  font-size: 26px;
+  text-transform: uppercase;
+  color: white;
+  bottom: 10px;
+  margin-bottom: 25px;
+  /* outline: 4px dashed black;  */
+}
+
+.copy ol li {
+  margin: 0 25px 0 25px;
+}
+
+/****** DECK COL-2 Styles ******/
+section[class="deck col-2"] {
+  width: 100%;
+  height: 300px;
+  margin-top: 50px;
+  box-shadow: 7px 7px 19px -5px rgba(0,0,0,0.44);
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  /* outline: 4px dashed red; */
+}
+
+.card > copy > catalog {
+  float: left;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(46, 125, 230);
+  font-size: 26px;
+  text-transform: uppercase;
+  color: white;
+  bottom: 10px;
+}
+
+/****** TABLE Styles ******/
+/* section[class="deck col-1"] table cart {
+  float: left;
+  width: 960px;
+  min-height: 80px;
+  height: auto;
+  outline: 4px dashed red; 
+} */
+
+/****** FOOTER Styles ******/
+footer {
+  width: 100%;
+  height: 50px;
+  color: #444;
+}
