@@ -13,7 +13,7 @@ function populateForm() {
   for (var i in Product.allProducts) {
 
     var optionElement = document.createElement('option');
-    optionElement.setAttribute("value",Product.allProducts[i].name);
+    optionElement.setAttribute("value", Product.allProducts[i].name);
     optionElement.textContent = Product.allProducts[i].name;
     selectElement.appendChild(optionElement);
 
@@ -27,7 +27,8 @@ function populateForm() {
 function handleSubmit(event) {
 
   event.preventDefault();
-
+  var target = event.target;
+  console.log(target);
   // Do all the things ...
   addSelectedItemToCart();
   cart.saveToLocalStorage();
@@ -42,28 +43,28 @@ function addSelectedItemToCart() {
   var pickedItem = selectElement.options[selectElement.selectedIndex].value.toLowerCase();
   var quantitySelected = document.getElementById('quantity').value;
 
-  
+
   cart.items.push(new CartItem(pickedItem, quantitySelected));
   console.log(cart);
 
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() { }
 
 function updateCartPreview() {
 
   var selectElement = document.getElementById('items');
   var pickedItem = selectElement.options[selectElement.selectedIndex].value.toLowerCase();
   var quantitySelected = document.getElementById('quantity').value;
-  
+
   var previewElement = document.getElementById('cartContents');
-  previewElement.innerHTML='';
+  previewElement.innerHTML = '';
   var ulEl = document.createElement('ul');
 
   for (var i in cart.items) {
     var liEl = document.createElement('li');
-    liEl.textContent = 'product: ' + cart.items[i].product + ', quantity: ' + cart.items[i].quantity; 
+    liEl.textContent = 'product: ' + cart.items[i].product + ', quantity: ' + cart.items[i].quantity;
     ulEl.appendChild(liEl);
   }
 

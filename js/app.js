@@ -7,12 +7,14 @@ var Cart = function(items) {
 };
 
 Cart.prototype.addItem = function(product, quantity) {
+  console.log('add item '+product+' '+quantity);
   var aNewItemForCart = new CartItem(product, quantity);
   this.items.push(aNewItemForCart);
 };
 
 Cart.prototype.saveToLocalStorage = function() {
   //Fill in this instance method to save the contents of the cart to localStorage
+  console.log('save '+this.product);
   localStorage.setItem('cart', JSON.stringify(this.product));
 };
 
